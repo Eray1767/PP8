@@ -134,8 +134,9 @@ In this exercise you will:
 #### Reflection Questions
 
 1. **How do you pass a file name to a program using the `-i` and `-o` options?**
+Einen Dateinamen übergibt man, indem man ihn direkt hinter der jeweiligen Option schreibt, zum Beispiel -i input.txt oder -o output.txt, wobei getopt() diesen Wert als Argument (optarg) einliest.
 2. **What are typical use cases for parameters versus flags? How do the differ from one another?**
-
+Flags werden genutzt, um ein Verhalten ein‑ oder auszuschalten (z. B. -v für verbose), während Parameter Werte oder Daten an das Programm übergeben (z. B. -i input.txt oder -n 42), sodass Flags reine Schalter sind und Parameter inhaltliche Informationen liefern
 ---
 
 ### Task 3: Interactive Input with `scanf` & `fscanf`
@@ -187,7 +188,7 @@ In this exercise you will:
 #### Reflection Question
 
 * **Why is a run-to-completion (batch) approach often preferable to interactive input?**
-
+Ein Run‑to‑Completion‑Ansatz ist meist besser, weil das Programm alle benötigten Daten bereits beim Start erhält, dadurch ohne weitere Benutzereingaben vollständig durchlaufen kann, was Automatisierung, Wiederholbarkeit und zuverlässige Verarbeitung ermöglicht.
 ---
 
 ### Task 4: Input Redirection from STDIN
@@ -218,7 +219,7 @@ In this exercise you will:
 #### Reflection Question
 
 * **What is the difference between redirecting to stdin and explicitly opening a file with `fopen`?**
-
+Das Redirect < input.txt lässt die Shell die Datei als Standard‑Eingabe bereitstellen, während fopen() die Datei direkt im Programm öffnet und dadurch mehr Kontrolle und Flexibilität bietet.
 ---
 
 ### Task 5: Caesar Cipher & Prototype Asymmetric XOR Cipher
@@ -408,7 +409,7 @@ In this exercise you will:
 #### Reflection Question
 
 * **Explain in your own words what the encryption and decryption processes are doing in both ciphers.**
-
+Beim Caesar‑Cipher werden Buchstaben einfach um eine bestimmte Anzahl Stellen im Alphabet verschoben, und beim Entschlüsseln dreht man diese Verschiebung wieder zurück, sodass der ursprüngliche Text entsteht. Beim XOR‑Cipher wird jedes Zeichen mit einem Schlüsselbitmuster verknüpft; weil die XOR‑Operation sich selbst wieder aufhebt, führt dieselbe Operation mit demselben Schlüssel den Text sowohl in die verschlüsselte als auch wieder in die entschlüsselte Form zurück.
 ---
 
 **Remember:** Stop after **90 minutes** and record where you stopped.
